@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form>
+	<fields addfieldpath="/administrator/components/com_fabrik/models/fields" name="params">
+		<fieldset name="plg-form-rest" label="COM_FABRIK_OPTIONS">
+			<field
+				name="rest_upsert_list_id"
+				type="number"
+				label="PLG_FORM_REST_UPSERT_LIST_ID_LABEL"
+				repeat="true"
+				description="PLG_FORM_REST_UPSERT_LIST_ID_DESC"
+			/>
+
+			<field
+					name="rest_upsert_auxiliar_id"
+					type="listfields"
+					label="PLG_FORM_REST_UPSERT_AUXILIAR_ID_LABEL"
+					repeat="true"
+					description="PLG_FORM_REST_UPSERT_AUXILIAR_ID_DESC"
+			/>
+
+			<field name="rest_upsert_insert_only"
+                   type="list"
+                   default="0"
+                   description="PLG_FORM_REST_UPSERT_INSERT_ONLY_DESC"
+                   label="PLG_FORM_REST_UPSERT_INSERT_ONLY_LABEL"
+                   repeat="true">
+                <option value="0">PLG_FORM_REST_UPSERT_INSERT_ONLY_BOTH</option>
+                <option value="1">PLG_FORM_REST_UPSERT_INSERT_ONLY_INSERT</option>
+                <option value="2">PLG_FORM_REST_UPSERT_INSERT_ONLY_UPDATE</option>
+            </field>
+
+            <field name="rest_upsert_pk_or_fk"
+                   type="radio"
+                   default="pk"
+                   class="btn-group"
+                   description="PLG_FORM_REST_UPSERT_PK_OR_FK_DESC"
+                   label="PLG_FORM_REST_UPSERT_PK_OR_FK_LABEL"
+                   repeat="true">
+                <option value="pk">PLG_FORM_REST_UPSERT_PK_OR_FK_PK</option>
+                <option value="fk">PLG_FORM_REST_UPSERT_PK_OR_FK_FK</option>
+            </field>
+
+            <field name="rest_upsert_primary_key"
+			type="text"
+			repeat="true"
+			label="PLG_FORM_REST_UPSERT_PRIMARY_KEY_LABEL"
+			description="PLG_FORM_REST_UPSERT_PRIMARY_KEY_DESC"
+            />
+
+            <field name="rest_upsert_row_value"
+                   type="field"
+                   description="PLG_FORM_UPSERT_ROWID_DESC"
+                   label="PLG_FORM_UPSERT_ROWID_LABEL"
+                   repeat="true"
+             />
+
+			<field
+				name="rest_upsert_elements_list"
+				type="fabrikmodalrepeat"
+				repeat="true"
+				description="PLG_FORM_REST_UPSERT_ELEMENTS_LIST_DESC"
+				label="PLG_FORM_REST_UPSERT_ELEMENTS_LIST_LABEL">
+				
+					<fields name="params">
+						<fieldset modal="true" name="rest_upsert_elements_list_modal" repeat="true">
+							<field name="rest_upsert_element_key"
+								type="text"
+								label="PLG_FORM_REST_UPSERT_ELEMENT_KEY_LABEL"
+							/>
+								
+							<field name="rest_upsert_element_value"
+								type="listfields"
+								valueformat="tableelement"
+								label="PLG_FORM_REST_UPSERT_ELEMENT_VALUE_LABEL"
+							/>
+								
+							<field name="rest_upsert_element_default"
+								type="text"
+								label="PLG_FORM_REST_UPSERT_ELEMENT_DEFAULT_LABEL"
+							/>
+								
+						</fieldset>
+					</fields>
+			</field>
+
+			<field name="rest_upsert_conditon"
+                   type="fabrikeditor"
+                   mode="php"
+                   repeat="true"
+                   description="PLG_FORM_REST_UPSERT_CONDITION_DESC"
+                   label="PLG_FORM_REST_UPSERT_CONDITION_LABEL"
+            />
+		</fieldset>
+		
+		<fieldset name="plg-form-rest-api" label="API">
+			<field name="api_url"
+				type="text"
+				repeat="true"
+				label="PLG_FORM_REST_UPSERT_API_URL_LABEL"
+				description="PLG_FORM_REST_UPSERT_API_URL_DESC"
+			/>
+			
+			<field name="api_key"
+				type="text"
+				repeat="true"
+				label="PLG_FORM_REST_UPSERT_API_KEY_LABEL"
+				description="PLG_FORM_REST_UPSERT_API_KEY_DESC"
+			/>
+
+			<field name="api_secret"
+				type="text"
+				repeat="true"
+				label="PLG_FORM_REST_UPSERT_API_SECRET_LABEL"
+				description="PLG_FORM_REST_UPSERT_API_SECRET_DESC"
+			/>
+		</fieldset>
+		
+	</fields>
+</form>
