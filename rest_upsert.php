@@ -64,7 +64,7 @@ class PlgFabrik_FormRest_upsert extends PlgFabrik_Form
         $options = new stdClass();
         $options->list_id = $params->get('rest_upsert_list_id');
         
-        //Campos específicos da Fabrik API
+        //Fabrik API specification fields
         $options->type = 'site';
         
         $auxiliarElementId = $params->get('rest_upsert_auxiliar_id');
@@ -105,7 +105,13 @@ class PlgFabrik_FormRest_upsert extends PlgFabrik_Form
 
         foreach ($keys as $key) {
             $search = str_replace("$listName.", '', $values[$i]);
-            $row->$key = $formModel->formData[$search] ? $formModel->formData[$search] : $defaults[$i];
+            if(is_array($formModel->formData[$search])) {
+                $value = $formModel->formData[$search][0];
+            } else {
+                $value = $formModel->formData[$search];
+            }
+
+            $row->$key = $value ? $value : $defaults[$i];
             $i++;
         }
 
@@ -183,7 +189,7 @@ class PlgFabrik_FormRest_upsert extends PlgFabrik_Form
         $options->list_id = $params->get('rest_upsert_list_id');
         $options->filters = $filters;
 
-        //Campos específicos da Fabrik API
+        //Fabrik API specification fields
         $options->data_type = 'list';
         $options->type = 'site';
 

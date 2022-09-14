@@ -98,6 +98,7 @@
 				repeat="true"
 				label="PLG_FORM_REST_UPSERT_API_URL_LABEL"
 				description="PLG_FORM_REST_UPSERT_API_URL_DESC"
+				default="http://localhost/index.php"
 			/>
 			
 			<field name="api_key"
