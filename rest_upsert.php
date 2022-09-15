@@ -115,20 +115,6 @@ class PlgFabrik_FormRest_upsert extends PlgFabrik_Form
             $i++;
         }
 
-        if (!$rowExists) {
-            if ($params->get('rest_upsert_pk_or_fk', 'pk') == 'fk') {
-                $row_value = $params->get('rest_upsert_row_value', '');
-                $fk = $params->get('rest_upsert_primary_key');
-                if ($row_value == '{origid}') {
-                    $rowId = $formModel->getInsertId();
-                    $row->$fk = $rowId;
-                } else {
-                    $fkValue = $formModel->formData[FabrikString::shortColName($row_value)];
-                    $row->$fk = $fkValue;
-                }
-            }
-        }
-
         if ($this->method === 'PUT') {
             $options->row_data = $row;
         }

@@ -29,17 +29,6 @@
                 <option value="2">PLG_FORM_REST_UPSERT_INSERT_ONLY_UPDATE</option>
             </field>
 
-            <field name="rest_upsert_pk_or_fk"
-                   type="radio"
-                   default="pk"
-                   class="btn-group"
-                   description="PLG_FORM_REST_UPSERT_PK_OR_FK_DESC"
-                   label="PLG_FORM_REST_UPSERT_PK_OR_FK_LABEL"
-                   repeat="true">
-                <option value="pk">PLG_FORM_REST_UPSERT_PK_OR_FK_PK</option>
-                <option value="fk">PLG_FORM_REST_UPSERT_PK_OR_FK_FK</option>
-            </field>
-
             <field name="rest_upsert_primary_key"
 			type="text"
 			repeat="true"
@@ -98,7 +87,7 @@
 				repeat="true"
 				label="PLG_FORM_REST_UPSERT_API_URL_LABEL"
 				description="PLG_FORM_REST_UPSERT_API_URL_DESC"
-				default="http://localhost/index.php"
+				default="http://localhost/index.php?option=com_fabrik&format=raw&task=plugin.pluginAjax&plugin=fabrik_api&method=apiCalled&g=list"
 			/>
 			
 			<field name="api_key"
