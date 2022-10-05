@@ -4,13 +4,13 @@
 
 <p style="text-align: justify">Primeiramente, deve-se instalar o plugin. Para isso, em sua tela de administrador do Joomla vá em Extensions->Manage->Install e clique na aba Upload Package File como na imagem abaixo.</p>
 
-![Instalação](Images/1.png)
+![Instalação](images/1.png)
 
 </br>
 
 <p style="text-align: justify">Após isso, basta navegar aos arquivos .rar das duas extensões necessárias e arrastar para a caixa de seleção, se ocorrer tudo como esperado na instalação o resultado deve ser o seguinte.</p>
 
-![Resultado Instalação](Images/2.png)
+![Resultado Instalação](images/2.png)
 
 ## Configurações Iniciais
 
@@ -20,11 +20,11 @@
 
 <p style="text-align: justify">Após a correta configuração da API o próximo passo é configurar os campos do plugin vinculados ao formulário em que deseja que o processo de armazenamento remoto ocorra. Para isso vá em Components->Fabrik->Forms como abaixo.</p>
 
-![formularios](Images/3.png)
+![formularios](images/3.png)
 
 <p style="text-align: justify">Em seguida, clique no formulário em que deseja deixar configurado e depois vá na aba Plug-ins e clique em Add, se dirija até o final da página onde se encontram as configurações padrões do plugin como ilustra a imagem a seguir.</p>
 
-![configuracoes iniciais](Images/4.png)
+![configuracoes iniciais](images/4.png)
 
 <p style="text-align: justify">No primeiro campo deve ser inserido o id da lista configurada corretamente com a fabrik_api no sistema de destino. Em seguida, selecione a chave primária da lista local, como padrão o elemento id da lista. Após, escolha entre as opções abaixo:</p>
 
@@ -38,11 +38,11 @@
 
 Vale ressaltar que na coluna Key, deve ser inserido os elementos fabrik da lista de destino, assim como na coluna Value selecionado o elemento correspondente na lista de origem e, opcionalmente, inserido um valor padrão que será inserido caso Value esteja vazio.</p>
 
-![Mapeamento dos elementos](Images/5.png)
+![Mapeamento dos elementos](images/5.png)
 
 <p style="text-align: justify">Mapeado os elementos clique em close e se quiser adicione uma condição, como código php, para que o plugin seja acionado. Dessa forma, um exemplo de configuração dessa aba será este a seguir.</p>
 
-![Exemplo de configuração](Images/6.png)
+![Exemplo de configuração](images/6.png)
 
 <p style="text-align: justify">Por fim, vá na aba API e forneça a url da api, em nosso caso, a url com o prefixo correto e as configurações da fabrik_api, depois forneça a chave de acesso e o secret configurado no sistema de destino.
 

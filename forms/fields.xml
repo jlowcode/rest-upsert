@@ -87,7 +87,6 @@
 				repeat="true"
 				label="PLG_FORM_REST_UPSERT_API_URL_LABEL"
 				description="PLG_FORM_REST_UPSERT_API_URL_DESC"
-				default="http://localhost/index.php?option=com_fabrik&format=raw&task=plugin.pluginAjax&plugin=fabrik_api&method=apiCalled&g=list"
 			/>
 			
 			<field name="api_key"
